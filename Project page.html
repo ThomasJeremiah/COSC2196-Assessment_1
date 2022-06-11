@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Project page</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h3>COSC2196 Assignment 1: Thomas Jeremiah</h3></h1>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Overview -->
+					<section id="Overview" class="wrapper">
+						<div class="inner">
+							<h1 class="major">True Random Number Generator</h1>
+							<span class="image fit"><img src="images/random numbers.jpg" alt="" /></span>
+							<h2>
+								Overview:
+							</h2>
+							<p>
+								In this assignment, it is proposed to develop a true random number generator (herein referred to as the TRNG), with a probability ratio of 1:1 for any value in the range.</p>
+							<p>
+								Random numbers are essential in modern cryptography for creating strong encryption keys. Most current on system methods of generating random numbers are considered sudo-random. The most common techniques use linear mathematical formulae, originating from a common set of seed variables. As the values are not truly random but deterministic, it is theoretically possible for an attacker to predict future numbers, and in doing so break the encryption.
+							</p>
+							<p>
+								It is proposed to develop a TRNG, leveraging the decay characteristics of a radioisotope. This truly random seed data, combined with further mathematical manipulation to eliminate the Gaussian distribution will produce a truly random number stream. 
+							</p>
+						</div>
+					</section>
+				<!-- Motiviation-->
+					<section id="Motiviation" class="wrapper">
+						<div class="inner">
+							<h2>
+								Motiviation:
+							</h2>
+							<p>
+								This project has the potential to meet a need currently present within the IT sector, assisting in providing consistent and reliable raw input for the encryption algorithms of today and the future.
+							</p>
+							<p>
+								Digital security impacts all sectors of the modern world. From individual rights to global finances, breeches in data security present a major threat. Combatting these threats presents an opportunity to contribute to the greater good.
+							</p>
+							<p>
+								Developing a product which provides system builders with a TRNG at a low cost and in a modular, replaceable package presents an opportunity to improve digital security for all.
+							</p>
+						</div>
+					</section>
+				<!-- Description-->
+					<section id="Description:" class="wrapper">
+						<div class="inner">
+							<h2>
+								Description:
+							</h2>
+							<ul>
+								<li>Quantum mechanics, of which radioisotope decay is a subset</li>
+								<li>Thermal noise</li>
+								<li>•Electromagnetic spectrum noise</li>
+								<li>•Traditional hardware such as quartz oscillators arranged to produce random outputs.</li>
+							</ul>
+							<p>
+								There are also some novel solutions, such as that used by CLOUDFLARE, which incorporates a wall of lava lamps. <a href="https://blog.cloudflare.com/lavarand-in-production-the-nitty-gritty-technical-details/" target="_blank">LavaRand in Production: The Nitty-Gritty Technical Details (cloudflare.com)</a>
+							</p>
+							<h3>In this project, it is proposed to further develop the radioisotope decay technique.</h3>
+							<p>
+								The decay characteristics of radioisotopes are well known. For any given volume of an isotope, half of the atoms will undergo radioactive decay in a given period. This is known as the half-life of the isotope and cannot be altered by any external influence. Despite the decay rate being highly predictable over time, individual decay events occur are at random. This behaviour can be leveraged to produce a highly random sample set.
+							</p>
+							<h4>This project concept incorporates two major areas;</h4>
+							<h5>
+								The capture of seed data from the decay of a radio isotope, which is predominantly a hardware challenge. Challenges include;
+							</h5>
+							<ul>
+								<li>Selection of a radioisotope with suitable properties. Half-life, activity, volume, and user safety are major considerations.</li>
+								<li>Sample capture hardware development.</li>
+								<li>The interface between hardware and software.</li>
+							</ul>
+							<p>
+								The intention with this project is to simplify and miniaturise the prototypes demonstrated by REFERENCES, resulting in a final product which fits within standard form factors and communication protocols. A single module of either 2.5” HDD, or PCIE 8x dimensions, will allow the device to be added to any modern computer system, from home users to data centres.
+							</p>
+							<p>
+								The selected radioisotope will be mounted in a shielded housing to mitigate risks associated with radiation. Each decay event will be detected with a Geiger-muller tube, an electrical component that detects the ionising particles produced by radioactive decay and outputs a corresponding electrical signal. Coupled with a microcontroller to collect the sample, this will provide the seed data required for the TRNG.
+							</p>
+							<h5>
+								The manipulation of the sample data to produce a true random number.
+							</h5>
+							<p>
+								A TRNG should produce values with extremely high entropy, meaning no single value should have a higher probability of occurring than any other.
+							</p>
+							<p>
+								While the values captured from radioisotope decay are random, the distribution of samples is highly predictable. The likelihood of a single value occurring is higher the closer that value is to the average of several samples. This phenomenon is known as a Gaussian distribution. To reduce the statistical probability for any given value, additional manipulation of the value is required. This process is generally known as a “Randomness Extractor”, and there is a large volume of prior work done in this space. For this project it is proposed to combine the seed data with well know mathematical formulae to output a stream of truly random numbers.
+							</p>
+						</div>
+					</section>
+				<!-- Tools&Technologies-->
+				<section id="Tools and Technologies" class="wrapper">
+					<div class="inner">
+						<h2>
+							Tools and Technologies:
+						</h2>
+						<h4>
+							Initial prototyping will be conducted with
+						</h4>
+						<ul>
+							<li>A radioisotope extracted from a smoke detector, typically Americium-241. </li>
+							<li>An Arduino microcontroller</li>
+							<li>A Geiger-Muller tube which can be sourced from local electronic stores.</li>
+							<li>Breadboards and general circuitry components.</li>
+						</ul>
+						<h4>
+							Further hardware development will include.
+						</h4>
+						<li>Developing and printing custom PCB to integrate the circuits</li>
+						<li>Programming a stand-alone microcontroller to replace the Arduino module</li>
+					</ul>
+					<p></p>
+					<p>
+						The Arduino and later stand-alone microcontroller can be programmed in the C++ language. The Arduino platform provides an IDE, which includes a text editor, terminal, and other functionality to assist with writing code. This IDE will also compile machine code for several standalone microcontrollers. 
+					</p>
+					<p>
+						Host system drivers and software will be developed in the most suitable language available.
+					</p>
+					</div>
+				</section>
+				<!-- Skills required-->
+				<section id="Skills required" class="wrapper">
+					<div class="inner">
+						<h2>
+							Skills required:
+						</h2>
+						<p>
+							This project will require skill with hardware development. Initial circuit design will be conducted on breadboards using the component data sheets as guidance on pin out and operating parameters. After proof-of-concept prototyping has been completed, PCB’s will need to be designed, manufactured, assembled, and tested. There are a number of software tools available for the design phase of PCB’s, and small volume production of PCB’s it readily available. Assembly and testing will need to be conducted in-house.
+						</p>
+						<p>
+							Iterative development of the hardware will be required to converge on the desired properties of compactness, standard form factor and safety.
+						</p>
+						<p>
+							Programming the Arduino/ microcontroller will require skills with the C++ language, and a good grasp of the hardware. Writing and developing the operating system interface will require programming skills, including modification and application of mathematical principles and equations.
+						</p>
+					</div>
+				</section>
+				<!-- Outcome-->
+				<section id="Outcome" class="wrapper">
+					<div class="inner">
+						<h2>
+							Outcome:
+						</h2>
+						<p>
+							To be successful, this project should result in a self-contained TRNG, which can be installed in any modern PC or server.
+						</p>
+						<p>
+							This product would enable a system builder to include a TRNG into any system, similar to installing a graphics card or additional storage drives. Due to the relatively simple nature of the product, retail cost should remain low compared to other system components which makes the product highly accessible to the market. Providing this functionality as a replaceable component also removes the requirement for CPU manufacturers to include this capability within CPU designs.
+						</p>
+						<p>
+							Easily available, onboard true random number generation would improve the security of encryption algorithms, which is a benefit for all systems and users.
+						</p>
+					</div>
+				</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
