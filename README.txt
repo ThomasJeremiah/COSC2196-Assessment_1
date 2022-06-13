@@ -1,3 +1,9 @@
+Assignment one for Introduction to IT @RMIT online 2022.
+Thomas Jeremiah
+email: S3963522@student.rmit.edu.au
+
+Site template taken from HTML5 UP and modified to suit.
+
 Hyperspace by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
